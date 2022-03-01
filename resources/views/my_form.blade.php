@@ -8,7 +8,7 @@
         @endforeach
     </ul>
 @endif -->
-<form action="add-student" method="post">
+<form action="submit-student" method="post">
 @csrf
     <p>
         Név: <input type="text" name="name" placeholder="név">

@@ -43,7 +43,7 @@ Route::get('/kapcs', function () {
 Route::get('/nagy', function () {
     return view('nagyon-nezet');
 });
-// Route::get('/myform', [StudalController::class, "myForm"]);
-// Route::post('/submit-student', [StudalController::class, "submitStudent"]);
+Route::get('/myform', [StudalController::class, "myForm"]);
+Route::post('/submit-student', [StudalController::class, "submitStudent"]);
 Route::match(["get", "post"], "/add-student", [StudalController::class, "addStudent"]);
 Route::match(["get", "post"], "/add-product", [ProductController::class, "addProduct"]);
