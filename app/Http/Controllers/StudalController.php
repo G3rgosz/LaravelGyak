@@ -17,8 +17,9 @@ class StudalController extends Controller
             $request->validate([
                 "name" => "required|min:4|max:20",
                 "email" => "required|email",
-                "phone" => "required"
+                "phone" => "required|digits_between:9,11"
             ]);
+            // "email" => "required|email|unique:students,email",
             print_r($request->all());
         }
         return view("my_form");
