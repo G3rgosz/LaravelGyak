@@ -11,21 +11,21 @@
 <form action="submit-student" method="post">
 @csrf
     <p>
-        Név: <input type="text" name="name" placeholder="név">
+        Név: <input type="text" name="name" value="{{ old('name')}}" placeholder="név">
         <br>
         @error("name")
             <span>{{$message}}</span>
         @enderror
     </p>
     <p>
-        Email: <input type="text" name="email" placeholder="email">
+        Email: <input type="text" name="email" value="{{ old('email')}}" placeholder="email">
         <br>
         @error("email")
             <span>{{$message}}</span>
         @enderror
     </p>
     <p>
-        Telefon: <input type="text" name="phone" placeholder="telefon">
+        Telefon: <input type="text" name="phone" value="{{ old('phone')}}" placeholder="telefon">
         <br>
         @error("phone")
             <span>{{$message}}</span>

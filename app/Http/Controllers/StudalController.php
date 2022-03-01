@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\StroreStudentData;
+use Validator;
 
 class StudalController extends Controller
 {
     public function myForm(){
         return view("my_form");
     }
-    public function submitStudent(StroreStudentData $request){
-        $request->validated();
+    // public function submitStudent(StroreStudentData $request){
+    //     // $request->validated();
+    //     // print_r($request->all());
+    public function submitStudent(Request $request){
+        $validator = Validator::make($request->all(),[
+            "name" => "required",
+            "email" => "required",
+            "phone" => "required"
+        ])->validate();
         print_r($request->all());
     }
     // public function addStudent(Request $request){
