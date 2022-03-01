@@ -29,7 +29,7 @@ class StroreStudentData extends FormRequest
             "phone" => "required|digits_between:9,11"
         ];
     }
-    public function message(){
+    public function messages(){
         return [
             "name.required" => "Név kötelező",
             "email.required" => "Email kötelező",
